@@ -1,2 +1,20 @@
 server:
-  port:8090
+  port: 8090
+
+# 分组任务配置
+chatbot-api:
+  launchList: group01,group02 # 启动几组，就配置几组
+  group01:
+    groupName: ChatGPT AI 问答助手
+    groupId: 28885518425541 # 知识星球ID
+    cookie:  # 知识星球个人cookie信息
+    openAiKey:  # 自行申请 https://beta.openai.com/overview
+    cronExpression: 0/30 * * * * ? # 执行的频次配置，参考：cron.qqe2.com
+    silenced: false
+  group02:
+    groupName: 码农会锁
+    groupId: 28885518425541 # 知识星球ID
+    cookie:  # 知识星球个人cookie信息
+    openAiKey:  # 自行申请 https://beta.openai.com/overview
+    cronExpression: 0/30 * * * * ? # 执行的频次配置，参考：cron.qqe2.com
+    silenced: true
